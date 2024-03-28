@@ -9,11 +9,16 @@
         <section id="About">
         <h2>About</h2>
           <p>I love cooking and eating seafood such as: crab, lobsters, ...</p>
-        <h2>Experience</h2>
-          <p>I only working on a pre-assignment before CTD program, it called: "khan academy".</p>
+        </section>
+        <section id="Experience">
+        <h2>Experience</h2> 
+        <ul>
+          <li>I only working on a pre-assignment before CTD program, it called: "khan academy".</li></ul>
+        </section>
+        <section id="Connect">
         <h2>Connect</h2>
-          <p><li>thanhmoreno@gmail.com</li>
-             <li>https://github.com/thanhmoreno/thanh-phan-haumea/commits?author=thanhmoreno</li></p>
+          <ul><li>thanhmoreno@gmail.com</li>
+              <li>https://github.com/thanhmoreno/thanh-phan-haumea/commits?author=thanhmoreno</li></ul>
         </section>
     </body>
 </html>
