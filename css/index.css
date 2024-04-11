@@ -1,23 +1,24 @@
-#experience {
+h2 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+#Experience {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
-.experience-item {
+.section_text {
+  margin-top: 15px;
+}
+.section_header {
+  margin-top: 15px;
+}
+
+
+#Connect {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.experience-title {
-  font-weight: bold;
-  flex: 1;
-}
-.experience-date {
-  margin-left: 20px;
-}
-#connect {
-  display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 .social-icons {
   display: flex;
@@ -27,3 +28,10 @@
   width: 30px;
   height: 30px;
 }
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
