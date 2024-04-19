@@ -10,13 +10,17 @@ body {
   background-color: beige;
 }
 
-a {
+.nav-link {
   text-decoration: none;
   color: red;
   font-weight: bold;
 }
+.body-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
 
-h1,
 h2 {
   font-family: thunderman;
 }
@@ -26,7 +30,6 @@ section {
   max-width: 80rem;
   padding: 1rem 2rem;
   /* margin: auto - centering elements in css */
-  margin: auto;
 }
 
 /* this is my gray box for my elements */
@@ -36,41 +39,39 @@ header {
   margin-bottom: 3rem;
 }
 
-#header-container {
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* a max width so things don't get too stretched out on larger screens */
-  max-width: 80rem;
-  margin: auto;
-}
-
 /* my gray box */
 nav {
   padding-top: 1.4rem;
 }
 
-#nav-links {
+#navbar {
   align-items: center;
   display: flex;
+  justify-content: space-around;
   border: 1px solid red;
 }
-
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+.header_name {
+  padding: 1rem 2rem;
+}
 /* a media query
 adding CSS that will only apply to smaller screens (smaller than 670px)
 */
-@media (max-width: 720px) {
-  #nav-links {
-    display: none;
+@media (max-width: 720px) { 
+.social-icon {
+  width: 20px;
+  height: 20px;
   }
-
-  #menu-icon {
-    display: inline;
-  }
-
-  #menu-icon svg {
-    color: rgb(212, 160, 83);
-    fill: green;
-  }
+.section_text {
+  font-size: 13px;
+ } 
+.header_name {
+  font-size: 20px;
+}
+.section_header {
+  font-size: 17px;
+}
 }
