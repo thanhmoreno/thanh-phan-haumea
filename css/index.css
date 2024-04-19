@@ -10,15 +10,17 @@ body {
   background-color: beige;
 }
 
-a {
+.nav-link {
   text-decoration: none;
   color: red;
   font-weight: bold;
 }
-
-h1 {
-
+.body-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
 }
+
 h2 {
   font-family: thunderman;
 }
@@ -28,7 +30,6 @@ section {
   max-width: 80rem;
   padding: 1rem 2rem;
   /* margin: auto - centering elements in css */
-  margin: auto;
 }
 
 /* this is my gray box for my elements */
@@ -53,12 +54,24 @@ nav {
   width: 30px;
   height: 30px;
 }
-
+.header_name {
+  padding: 1rem 2rem;
+}
 /* a media query
 adding CSS that will only apply to smaller screens (smaller than 670px)
 */
-/*
 @media (max-width: 720px) { 
- 
+.social-icon {
+  width: 20px;
+  height: 20px;
   }
+.section_text {
+  font-size: 13px;
+ } 
+.header_name {
+  font-size: 20px;
+}
+.section_header {
+  font-size: 17px;
+}
 }
