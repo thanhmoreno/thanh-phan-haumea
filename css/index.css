@@ -16,7 +16,9 @@ a {
   font-weight: bold;
 }
 
-h1,
+h1 {
+
+}
 h2 {
   font-family: thunderman;
 }
@@ -36,41 +38,27 @@ header {
   margin-bottom: 3rem;
 }
 
-#header-container {
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* a max width so things don't get too stretched out on larger screens */
-  max-width: 80rem;
-  margin: auto;
-}
-
 /* my gray box */
 nav {
   padding-top: 1.4rem;
 }
 
-#nav-links {
+#navbar {
   align-items: center;
   display: flex;
+  justify-content: space-around;
   border: 1px solid red;
+}
+.social-icon {
+  width: 30px;
+  height: 30px;
 }
 
 /* a media query
 adding CSS that will only apply to smaller screens (smaller than 670px)
 */
-@media (max-width: 720px) {
-  #nav-links {
-    display: none;
-  }
-
-  #menu-icon {
-    display: inline;
-  }
-
-  #menu-icon svg {
-    color: rgb(212, 160, 83);
-    fill: green;
+/*
+@media (max-width: 720px) { 
+ 
   }
 }
