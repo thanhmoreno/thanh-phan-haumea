@@ -39,7 +39,8 @@ header {
 .section_text {
   display: flex;
   flex-direction: column;
-  color:rgb(18, 64, 101);
+  size: 50px;
+  color: black;
 }
 
 .header_name {
