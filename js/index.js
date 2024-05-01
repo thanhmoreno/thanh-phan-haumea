@@ -59,24 +59,25 @@ messageForm.addEventListener('submit', function(event) {
         console.log(usersMessage);
 
 // create variable named messageSection
-        const messageSection = document.querySelector('messages');
+        const messageSection = document.querySelector('#messages');
+        console.log(messageSection);
 
 // create variable named messageList to query messageSection
         const messageList = messageSection.querySelector('ul');
 
 // create variable named newMessage make new list
 //
-        const newMessage = document.createElement("li");
+        const newMessage = document.createElement('li');
         newMessage.innerHTML = '<a href="mailto:' + usersEmail + '">' + usersName + '</a> <span>' + usersMessage + '</span>';
 
 // create variable removeButton make new button
-        const removeButton = document.createElement("button");
+        const removeButton = document.createElement('button');
 
 // set type attribute to "button"
-        removeButton.type = "button";
+        removeButton.type = 'button';
 
 // set inner text to "remove"
-        removeButton.innerText = "remove";
+        removeButton.innerText = 'remove';
 
 // add event listenser to removeButton
         removeButton.addEventListener('click', function(event) {
