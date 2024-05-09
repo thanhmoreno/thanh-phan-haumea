@@ -99,8 +99,8 @@ messageForm.addEventListener('submit', function(event) {
 });
 
 // fetch github repositories
-const githubUsername = "thanh-phan-haumea";
-fetch('https://api.github.com/users/${githubUsername}/repos')
+const githubUsername = "thanhmoreno";
+fetch(`https://api.github.com/users/${githubUsername}/repos`)
 
 // handle response
 .then(response => response.json())
@@ -119,23 +119,24 @@ const projectList = projectSection.querySelector('ul');
 // loop over repositorie
 // create list item for each repo
 repositories.forEach(repository => {
+        console.log(repository.name);
+});
         const project = document.createElement('li');
 
         // set innerText for repo name
-        project.innerText = repositoriy.name;
+        project.innerText = repository.name;
 
         // append project to projectList
         projectList.appendChild(project);
         });
-})
  
 // handle errors
 .catch(error => {
 
         // display error message
         console.error('error fetching data:', error);
-        const projectSection = document.getElementById('project');
-        projectSection.innerText = 'error fetching data. please try again later.';
+        const project = document.getElementById('project');
+        project.innerText = 'error fetching data. please try again later.';
 });
 
 
