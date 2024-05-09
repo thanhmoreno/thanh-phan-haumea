@@ -41,7 +41,7 @@ for ( let i = 0; i < arrayOfSkills.length; i++) {
 } 
 
 // Create a variable named messageForm that uses "DOM Selection" to select the "leave_message" form by name attribute
-const messageForm = document.querySelector('form[name="leave_message"]');
+const messageForm = document.querySelector('form[name="leave_message"]'); 
 
 // add EventListener to messageForm
 // add preventDefault form submission behavior
@@ -60,7 +60,6 @@ messageForm.addEventListener('submit', function(event) {
 
 // create variable named messageSection
         const messageSection = document.querySelector('#messages');
-        console.log(messageSection);
 
 // create variable named messageList to query messageSection
         const messageList = messageSection.querySelector('ul');
@@ -98,4 +97,45 @@ messageForm.addEventListener('submit', function(event) {
 // add a reset method
         messageForm.reset();
 });
+
+// fetch github repositories
+const githubUsername = "thanh-phan-haumea";
+fetch('https://api.github.com/users/${githubUsername}/repos')
+
+// handle response
+.then(response => response.json())
+
+// handle JSON data
+.then(data => {
+        console.log(data);
+
+// store repositories
+const repositories = data;
+
+// display repositories in list
+const projectSection = document.getElementById('project');
+const projectList = projectSection.querySelector('ul');
+
+// loop over repositorie
+// create list item for each repo
+repositories.forEach(repository => {
+        const project = document.createElement('li');
+
+        // set innerText for repo name
+        project.innerText = repositoriy.name;
+
+        // append project to projectList
+        projectList.appendChild(project);
+        });
+})
+ 
+// handle errors
+.catch(error => {
+
+        // display error message
+        console.error('error fetching data:', error);
+        const projectSection = document.getElementById('project');
+        projectSection.innerText = 'error fetching data. please try again later.';
+});
+
 
