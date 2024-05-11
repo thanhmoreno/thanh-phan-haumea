@@ -99,10 +99,14 @@ messageForm.addEventListener('submit', function(event) {
 });
 
 // fetch github repositories
+// its the newest version of code that other people been using 
+// its sending message to github, bringing all the cool code home and find out what projects i am working on!
 const githubUsername = "thanhmoreno";
 fetch(`https://api.github.com/users/${githubUsername}/repos`)
 
 // handle response
+// .then() is promisin method
+// giving instructions to mke sure they understand what brings back from github
 .then(response => response.json())
 
 // handle JSON data
@@ -113,6 +117,7 @@ fetch(`https://api.github.com/users/${githubUsername}/repos`)
 const repositories = data;
 
 // display repositories in list
+// just finding "project", then "ul" 
 const projectSection = document.getElementById('project');
 const projectList = projectSection.querySelector('ul');
 
@@ -120,23 +125,24 @@ const projectList = projectSection.querySelector('ul');
 // create list item for each repo
 repositories.forEach(repository => {
         console.log(repository.name);
-});
+
+        // to create "li"
         const project = document.createElement('li');
 
         // set innerText for repo name
+        // repository.name is the name of thing i want to write down
         project.innerText = repository.name;
 
         // append project to projectList
         projectList.appendChild(project);
         });
+})
  
 // handle errors
 .catch(error => {
-
-        // display error message
-        console.error('error fetching data:', error);
-        const project = document.getElementById('project');
-        project.innerText = 'error fetching data. please try again later.';
+        console.error('Error fetching data:', error);
+        // Displaying an error message to the user
+        projectList.innerText = 'Error fetching data. Please try again later.';
 });
 
 
