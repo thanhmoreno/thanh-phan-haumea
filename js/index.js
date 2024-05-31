@@ -146,3 +146,10 @@ repositories.forEach(repository => {
 });
 
 
+fetch(`https://api.sampleapis.com/coffee/hot`)
+.then(response => response.json())
+
+// handle JSON data
+.then(data => {
+        console.log(data);
+})
