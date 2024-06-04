@@ -16,7 +16,7 @@ let footer = document.querySelector("footer");
 let copyright = document.createElement("p");
 
 // inner HTML of copyright elements
-copyright.innerHTML = "Nancy Phan &copy; " + thisYear;
+copyright.innerHTML = "Thanh Phan &copy; " + thisYear;
 
 // append the copyright element 
 footer.appendChild(copyright);
@@ -146,3 +146,10 @@ repositories.forEach(repository => {
 });
 
 
+fetch(`https://api.sampleapis.com/coffee/hot`)
+.then(response => response.json())
+
+// handle JSON data
+.then(data => {
+        console.log(data);
+})
