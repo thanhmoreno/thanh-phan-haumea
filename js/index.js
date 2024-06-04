@@ -16,7 +16,7 @@ let footer = document.querySelector("footer");
 let copyright = document.createElement("p");
 
 // inner HTML of copyright elements
-copyright.innerHTML = "Nancy Phan &copy; " + thisYear;
+copyright.innerHTML = "Thanh Phan &copy; " + thisYear;
 
 // append the copyright element 
 footer.appendChild(copyright);
